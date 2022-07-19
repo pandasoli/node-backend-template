@@ -1,12 +1,12 @@
 
 type Token = {
-	_id: string
-	nick: string
+  _id: string
+  nick: string
 }
 
 const BlankToken: Token = {
-	_id: '',
-	nick: '',
+  _id: '',
+  nick: '',
 }
 
 

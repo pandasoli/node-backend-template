@@ -11,19 +11,19 @@ type Props = {
 }[]
 
 const GetUser = async (props: Props) => {
-	const database = new Database
-	await database.connect()
+  const database = new Database
+  await database.connect()
 
-	const collection = database.db.collection('users')
-	const get = await collection.findOne({ $or: props }) as User
+  const collection = database.db.collection('users')
+  const get = await collection.findOne({ $or: props }) as User
 
-	let response = BlankUser
+  let response = BlankUser
 
-	if (get._id)
-		response = get
+  if (get._id)
+    response = get
 
-	database.end()
-	return response
+  database.end()
+  return response
 }
 
 
